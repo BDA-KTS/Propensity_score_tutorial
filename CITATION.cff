@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Momeni
+    given-names: Fakhri
+title: "Propensity Score Matching for Assessing the Impact of Job Training Programs on Employment Outcomes: A Step-by-Step Guide using R"
+version: 1.0
+identifiers:
+  - type: 
+    value: 
+date-released: 2025-06-10
