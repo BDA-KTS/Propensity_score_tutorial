@@ -7,8 +7,6 @@
 - Interpret the results of propensity score matching.
 - Apply the technique to assess the impact of job training programs on employment outcomes.
 
-## Description
-
 This tutorial provides an in-depth guide on utilizing a [propensity score matching](https://en.wikipedia.org/wiki/Propensity_score_matching) technique in R on a simple use case. We illustrate how propensity score matching, as described [here](https://github.com/momenifi/methodHub/blob/main/academic_mobility_propensity_score/method/), can effectively estimate the effect of a treatment or intervention while accounting for covariates that predict treatment receipt.
 For example, you might be interested in estimating the effect of job training programs on employment outcomes.
 In this scenario, we utilize the propensity score method to estimate this effect. It specifically delves into variables such as age, education level, years of experience, earnings before and after the training program, and participation in the training program (treatment variable). The guide comprises step-by-step instructions, example code snippets, and elucidations to facilitate comprehension and implementation.
