@@ -1,4 +1,4 @@
-# Propensity Score Matching for Assessing the Impact of Job Training Programs on Employment Outcomes: A Step-by-Step Guide using R
+# A Step-by-Step Guide To Evaluate Propensity Score in R
 
 ## Learning Objectives
 
