@@ -1,4 +1,4 @@
-# A Step-by-Step Guide To Evaluate Propensity Score in R
+# A Step-by-Step Guide To Evaluate Training-Salary Propensity Score in R
 
 ## Learning Objectives
 
