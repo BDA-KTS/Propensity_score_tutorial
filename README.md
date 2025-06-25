@@ -28,8 +28,10 @@ The [provided dataset](https://github.com/momenifi/methodHub/blob/main/academic_
 
 AGE, EDUCATION, and EXPERIENCE are regarded as covariates, while EARNINGS_PRE and EARNINGS_POST are used to evaluate the job training program's impact via SMD. A value of 1 in the **TREATED** column signifies the treatment group, whereas a value of 0 represents the control group.
 
-
 The tutorial offers step-by-step instructions, example code, and explanations to facilitate understanding and implementation.
+
+## Social Science Use Case
+The tutorial demonstrates the causal effect of job training programs on the salaries of the employees. It uses the propensity score method having training programs as treatment group and the pre-training and post-training salaries as the control group.
 
 ## Target Audience
 
