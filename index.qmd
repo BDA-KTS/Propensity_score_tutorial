@@ -117,52 +117,50 @@ Here is a screenshot of sample input data:
 Execute this line to define the necessary functions from "propensity_matching_functions.R":
 
     ```{r}
-     source(file.path(script_dir, "propensity_matching_functions.R"))
-     ```
+    source(file.path(script_dir, "propensity_matching_functions.R"))
+    ```
 
 5. Define Treatment Variable and Covariates:
 
 Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE":
 
-        ```{r}
-        # Define variables
-         treatment_var <- "MOBILE"  # Specify your treatment variable
-         covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
-     ```
+    ```{r}
+    # Define variables
+    treatment_var <- "MOBILE"  # Specify your treatment variable
+    covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
+    ```
 
 6. Perform Propensity Score Matching:
 
 Call the `perform_propensity_matching` function with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
 
-        ```R
-        # Perform propensity score matching
-         matching_results <- perform_propensity_matching(data = data_sample,
-                                                   treatment_var = treatment_var,
-                                                   covariates = covariates)
-     ```
+    ```R
+    # Perform propensity score matching
+    matching_results <- perform_propensity_matching(data = data_sample, treatment_var = treatment_var, covariates = covariates)
+    ```
 
 The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` and `matched_smd`):
 
-      ```R
-      # Access SMDs of unmatched and matched data
-      unmatched_smd <- matching_results$unmatched_smd
-      matched_smd <- matching_results$matched_smd
-     ```
+    ```R
+    # Access SMDs of unmatched and matched data
+    unmatched_smd <- matching_results$unmatched_smd
+    matched_smd <- matching_results$matched_smd
+    ```
       
-      and the matched data:
+    and the matched data:
       
-      ```R
-     # Matched data
-      matched_data <- matching_results$matched_data
-      ```
+    ```R
+    # Matched data
+    matched_data <- matching_results$matched_data
+    ```
 
 7. Define Variables of Interest:
 
 Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP":
 
     ```R
-      vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
-     ```
+    vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
+    ```
      
 
 8. Calculate Mean Differences:
@@ -170,16 +168,16 @@ Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP
 Call the `calculate_mean_diff` function in line 33 of "main_script.R" with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
 
     ```R
-     # Calculate mean differences
-      mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
-     ```
+    # Calculate mean differences
+    mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
+    ```
    
 The output provides the mean differences of `vars_of_interest`.
 
-      ```R
-      # Print mean differences
-      print(mean_diff)
-     ```
+    ```R
+    # Print mean differences
+    print(mean_diff)
+    ```
      
 **Sample Output:** Sample output includes standardized mean differences (SMD) for unmatched and matched data, as well as mean differences, t-values, and standard errors for variables of interest. 
       
