@@ -169,3 +169,6 @@ In conclusion, this tutorial provides a detailed overview of propensity score ma
 - Competence in assessing the impact of academic mobility on research productivity, received citations, and collaboration indicators using propensity score matching.
 
 Propensity score matching is a powerful technique for estimating causal effects in observational studies, particularly in the context of social science research. By mastering this technique, researchers can overcome challenges associated with selection bias and confounding variables, leading to more robust and reliable research findings. We encourage learners to further explore advanced topics in propensity score matching and apply these skills to their own research endeavors.
+
+## Contact Details
+For more information, please contact <fakhri.momeni@gesis.org>
