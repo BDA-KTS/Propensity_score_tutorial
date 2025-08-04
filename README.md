@@ -1,11 +1,9 @@
 # A Step-by-Step Guide To Evaluate Training-Salary Propensity Score in R
-
 ## Learning Objectives
 
-- Understand the concept of propensity score matching.
-- Implement propensity score matching using R programming language.
-- Interpret the results of propensity score matching.
-- Apply the technique to assess the impact of job training programs on employment outcomes.
+- Understand and apply propensity score matching in R.
+- Interpret matching results to assess treatment effects.
+- Evaluate job training programs' impact on employment outcomes.
 
 ## Target Audience
 
