@@ -200,3 +200,6 @@ Propensity score matching is a powerful technique for estimating causal effects 
 
 ## References
 - Momeni, F., Karimi, F., Mayr, P., Peters, I., & Dietze, S. (2022). The many facets of academic mobility and its impact on scholars' career. Journal of Informetrics, 16(2), 101280. [https://doi.org/10.1016/j.joi.2022.101280](https://doi.org/10.1016/j.joi.2022.101280)
+
+## Contact Details
+For more information, please contact <fakhri.momeni@gesis.org>
