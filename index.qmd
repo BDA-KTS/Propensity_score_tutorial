@@ -8,8 +8,8 @@ author:
     orcid: 
     affiliations:
       - name: GESIS Leibniz Institute for the Social Sciences
-bibliography: references.bib
-csl: apa.csl
+#bibliography: references.bib
+#csl: apa.csl
 # image: img/cover.jpg
 # image-alt: Computer screen showing calculator app.
 format:
