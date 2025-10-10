@@ -17,7 +17,7 @@ format:
   ipynb: default
 ---
 
-```{r}
+```{r, eval = interactive()}
 #| include: false
 set.seed(721831)
 ```
@@ -44,7 +44,7 @@ Ensure you have R (version 3.6.0 or higher) environment on your local machine.
 
 Install the required R packages by running the following commands:
 
-```{r}
+```{r, eval = interactive()}
 install.packages("Matching")
 install.packages("tableone")
 ```
@@ -101,12 +101,12 @@ Download the following files into a single folder:
 Execute the following lines to load the input dataset into R as `data_sample.`:
 
       # Get the directory path of the main_script.R
-      ```{r}
+      ```{r, eval = interactive()}
       script_dir <- dirname(rstudioapi::getActiveDocumentContext()$path)
       ```
 
       # Example usage:
-      ```{r}
+      ```{r, eval = interactive()}
       data_sample <- read.table(file.path(script_dir, "mydata_sample.csv"), header = TRUE, sep = ",", quote = "\r", dec = ".")
       ```
        
@@ -118,7 +118,7 @@ Here is a screenshot of sample input data:
 
 Execute this line to define the necessary functions from "propensity_matching_functions.R":
 
-    ```{r}
+    ```{r, eval = interactive()}
     source(file.path(script_dir, "propensity_matching_functions.R"))
     ```
 
@@ -127,7 +127,7 @@ Execute this line to define the necessary functions from "propensity_matching_fu
 Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`covariates`) as "REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", and "AGE":
 
     # Define variables
-    ```{r}
+    ```{r, eval = interactive()}
     treatment_var <- "MOBILE"  # Specify your treatment variable
     covariates <- c("REGION", "MAIN_FIELD", "INTERNATIONAL_COAUTHOR", "GENDER", "GDP_PC_ORIGIN", "AGE")
     ```
@@ -137,14 +137,14 @@ Define the treatment variable (`treatment_var`) as "MOBILE" and covariates (`cov
 Call the `perform_propensity_matching` function with parameters `data_sample`, `treatment_var`, and `covariates` to conduct propensity score matching:
 
     # Perform propensity score matching
-    ```{r}
+    ```{r, eval = interactive()}
     matching_results <- perform_propensity_matching(data = data_sample, treatment_var = treatment_var, covariates = covariates)
     ```
 
 The output includes standardized mean differences (SMDs) of unmatched/matched data (`unmatched_smd` and `matched_smd`):
 
     # Access SMDs of unmatched and matched data
-    ```{r}
+    ```{r, eval = interactive()}
     unmatched_smd <- matching_results$unmatched_smd
     matched_smd <- matching_results$matched_smd
     ```
@@ -152,7 +152,7 @@ The output includes standardized mean differences (SMDs) of unmatched/matched da
     and the matched data:
       
     # Matched data
-    ```{r}
+    ```{r, eval = interactive()}
     matched_data <- matching_results$matched_data
     ```
 
@@ -160,7 +160,7 @@ The output includes standardized mean differences (SMDs) of unmatched/matched da
 
 Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP":
 
-    ```{r}
+    ```{r, eval = interactive()}
     vars_of_interest <- c("PPY", "CPP", "COPP")  # Specify variables for mean difference calculation
     ```
      
@@ -170,14 +170,14 @@ Define the variables of interest (`vars_of_interest`) as "PPY", "CPP", and "COPP
 Call the `calculate_mean_diff` function in line 33 of "main_script.R" with parameters `matched_data`, `treatment_var`, and `vars_of_interest` to calculate mean differences for the variables of interest.
 
     # Calculate mean differences
-    ```{r}
+    ```{r, eval = interactive()}
     mean_diff <- calculate_mean_diff(data = matched_data, treatment_var = treatment_var, vars_of_interest = vars_of_interest)
     ```
    
     The output provides the mean differences of `vars_of_interest`.
 
    # Print mean differences 
-    ```R
+    ```{r, eval = interactive()}
     print(mean_diff)
     ```
      
